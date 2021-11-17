@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  iss-tracker:
+    image: iss-tracker
+    container_name: iss-tracker
+    build:
+      context: ./tracker
+      dockerfile: ./Dockerfile
