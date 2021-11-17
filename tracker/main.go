@@ -16,7 +16,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("Date: ", services.FormatDate(response.Date))
-	fmt.Println("Longitude: ", response.ISSPosition.Longitude)
-	fmt.Println("Latitude: ", response.ISSPosition.Latitude)
+	fmt.Println("> Date: ", services.FormatDate(response.Date))
+	fmt.Println("> Longitude: ", response.ISSPosition.Longitude)
+	fmt.Println("> Latitude: ", response.ISSPosition.Latitude)
 }
