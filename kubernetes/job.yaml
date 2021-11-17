@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: iss-tracker
+spec:
+  schedule: "*/1 * * * *"  
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 30
+      template:
+        spec:
+          containers:
+          - name: iss-tracker
+            image: jefersondsgomes/iss-tracker
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
